@@ -1,49 +1,4 @@
 //dummy text 
 
 hello guys i am ravi dhawan learning typescript 
-i am facing problem in typescript
-i am using typescript in react and next js//dummy text 
-
-//dummy text 
-
-hello guys i am ravi dhawan learning typescript 
-i am facing problem in typescript
-i am using typescript in react and next js//dummy text 
-
-//dummy text 
-
-hello guys i am ravi dhawan learning typescript 
-i am facing problem in typescript
-i am using typescript in react and next js//dummy text 
-
-//dummy text 
-
-hello guys i am ravi dhawan learning typescript 
-i am facing problem in typescript
-i am using typescript in react and next js//dummy text 
-
-//dummy text 
-
-hello guys i am ravi dhawan learning typescript 
-i am facing problem in typescript
-i am using typescript in react and next js//dummy text 
-
-//dummy text 
-
-hello guys i am ravi dhawan learning typescript 
-i am facing problem in typescript
-i am using typescript in react and next js//dummy text 
-
-//dummy text 
-
-hello guys i am ravi dhawan learning typescript 
-i am facing problem in typescript
-i am using typescript in react and next js//dummy text 
-
-//dummy text 
-
-hello guys i am ravi dhawan learning typescript 
-i am facing problem in typescript
-i am using typescript in react and next js//dummy text 
-
 result is added result is added result is added result is added 

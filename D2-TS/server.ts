@@ -22,18 +22,29 @@ const server:Server = http.createServer((req:IncomingMessage,res:ServerResponse)
 // res.end(JSON.stringify(osData))
 
 // file module
-  fs.readFile('server.txt','utf-8',(error ,result)=>{
+  // fs.readFile('server.txt','utf-8',(error ,result)=>{
+  //   if(error){
+  //       console.log(error)
+  //   }
+  //   fs.appendFile('server.txt', "result is added ", 'utf-8', (err)=>{
+  //           if(err){
+  //               console.log(err)
+  //           }
+  //           res.end(result)
+  //   })
+  // })
+
+  fs.readFile('json.json','utf-8',(error ,result)=>{
     if(error){
         console.log(error)
     }
-    fs.appendFile('server.txt', "result is added ", 'utf-8', (err)=>{
-            if(err){
-                console.log(err)
-            }
-            res.end(result)
-    })
+    // fs.appendFile('server.txt', "result is added ", 'utf-8', (err)=>{
+    //         if(err){
+    //             console.log(err)
+    //         }
+    //       })
+          res.end(result)
   })
-
 })
 server.listen(port,hostname,()=>{
  console.log(`server is running at  http://${hostname}:${port}` )
