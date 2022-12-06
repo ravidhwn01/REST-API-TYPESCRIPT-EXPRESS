@@ -11,6 +11,30 @@ import { MathUtil } from './mathUtil';
 const server:Server = http.createServer((req:IncomingMessage,res:ServerResponse)=>{
     res.statusCode = 200;
     res.setHeader('content-type','text/html');
+
+    //node js routing
+    let url:string | undefined = req.url; 
+    let method:string | undefined = req.method;
+    let result:string = '';
+
+if(url ==='/' && method ==='GET'){
+  result = `welcome to node js with TS tutorial `;
+
+} else if(url ==='/about'&& method ==='GET'){
+  result = ` welcome to About page`;
+}
+ else if(url ==='/service'&& method ==='GET'){
+  result = ` welcome to service page`;
+}
+ else if(url ==='/contact'&& method ==='GET'){
+  result = ` welcome to contact page`;
+} 
+else{
+  result = ` page not found!`
+}
+
+res.end(`${result}`)
+
 // res.end(`hello welcome to ts tut.`)
 // os module
 // let osData = {
@@ -35,17 +59,18 @@ const server:Server = http.createServer((req:IncomingMessage,res:ServerResponse)
   //   })
   // })
 
-  fs.readFile('json.json','utf-8',(error ,result)=>{
-    // if(error){
-    //     console.log(error)
-    // }
-    fs.appendFile('json.json', "result is added ", 'utf-8', (err)=>{
-            if(err){
-                console.log(err)
-            }
-    res.end(result)
-          })
-  })
+  // fs.readFile('json.json','utf-8',(error ,result)=>{
+  //   // if(error){
+  //   //     console.log(error)
+  //   // }
+  //   // fs.appendFile('json.json', "result is added ", 'utf-8', (err)=>{
+  //           if(error){
+  //               console.log(error)
+  //           }
+  //   res.end(result)
+          
+  
+  // })
     // string util 
     // let name:string = 'ravidhawan'
     // let length:number = StringUtil.printLength(name);
