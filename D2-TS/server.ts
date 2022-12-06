@@ -5,7 +5,7 @@ import fs from "fs";
 
 const hostname:string = '127.0.0.1';
 const port:number = 5000;
-
+import { StringUtil } from './strinutils';
 
 const server:Server = http.createServer((req:IncomingMessage,res:ServerResponse)=>{
     res.statusCode = 200;
@@ -43,7 +43,14 @@ const server:Server = http.createServer((req:IncomingMessage,res:ServerResponse)
     //             console.log(err)
     //         }
     //       })
-          res.end(result)
+    // string util 
+    // let name:string = 'ravidhawan'
+    // let length:number = StringUtil.printLength(name);
+    // console.log(length)
+    //       res.end(`lenght is : ${length}`) 
+    let name : string =  'ravi dhawan'
+    let result1: string = StringUtil.printTriagle(name)
+    res.end(result1)
   })
 })
 server.listen(port,hostname,()=>{
