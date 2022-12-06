@@ -2,6 +2,7 @@ import http, { IncomingMessage, Server, ServerResponse } from 'http'
 import os from 'os'
 
 import fs from "fs";
+import { ApiRouter } from "./router/apiRouting";
 
 const hostname:string = '127.0.0.1';
 const port:number = 5000;
@@ -12,29 +13,8 @@ const server:Server = http.createServer((req:IncomingMessage,res:ServerResponse)
     res.statusCode = 200;
     res.setHeader('content-type','text/html');
 
-    //node js routing
-    let url:string | undefined = req.url; 
-    let method:string | undefined = req.method;
-    let result:string = '';
-
-if(url ==='/' && method ==='GET'){
-  result = `welcome to node js with TS tutorial `;
-
-} else if(url ==='/about'&& method ==='GET'){
-  result = ` welcome to About page`;
-}
- else if(url ==='/service'&& method ==='GET'){
-  result = ` welcome to service page`;
-}
- else if(url ==='/contact'&& method ==='GET'){
-  result = ` welcome to contact page`;
-} 
-else{
-  result = ` page not found!`
-}
-
-res.end(`${result}`)
-
+    
+ApiRouter.mapRoutes(req,res);
 // res.end(`hello welcome to ts tut.`)
 // os module
 // let osData = {
