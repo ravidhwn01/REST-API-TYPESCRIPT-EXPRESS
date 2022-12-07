@@ -18,14 +18,22 @@ ApiRouter.mapRoutes(req,res);
 
 // Url and post 
 try {
-  if(req.url === '/user' && req.method ==='POST'){
+  if(req.url === '/login' && req.method ==='POST'){
     let body : any = '';
     req.on('data', (chunk)=>{
         body +=chunk;
     }).on('end', ()=>{
       let formData = JSON.parse(body);
-      console.log(formData);
-      res.end(JSON.stringify(formData))
+      if(formData.name ==='ravi' && formData.password ==='ravi@123'){
+        console.log("login is success.");
+        
+        res.end("login is success.")
+      }
+      else{
+        console.log("login is unsuccess.");
+
+        res.end(`invalid input`)
+      }
     })
   }
 } catch (error) {
