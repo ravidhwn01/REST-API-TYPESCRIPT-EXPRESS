@@ -1,5 +1,6 @@
 import { IncomingMessage, ServerResponse } from "http";
 import http  from "http";
+import { Draw } from "../strinutils";
 
 
 
@@ -12,6 +13,9 @@ let result:string = '';
 
 if(url ==='/' && method ==='GET'){
 result = `welcome to node js with TS tutorial `;
+let arr: string[] = ['Apple', 'Orange', 'Banana']
+Draw.printArray(arr);
+
 
 } else if(url ==='/about'&& method ==='GET'){
 result = ` welcome to About page`;

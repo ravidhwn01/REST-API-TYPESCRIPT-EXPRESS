@@ -6,7 +6,7 @@ import { ApiRouter } from "./router/apiRouting";
 
 const hostname:string = '127.0.0.1';
 const port:number = 5000;
-import { StringUtil } from './strinutils';
+import { Draw, StringUtil } from './strinutils';
 import { MathUtil } from './mathUtil';
 
 const server:Server = http.createServer((req:IncomingMessage,res:ServerResponse)=>{
@@ -14,7 +14,7 @@ const server:Server = http.createServer((req:IncomingMessage,res:ServerResponse)
     res.setHeader('content-type','application/json');
 
     
-// ApiRouter.mapRoutes(req,res);
+ApiRouter.mapRoutes(req,res);
 
 // Url and post 
 try {
@@ -31,6 +31,8 @@ try {
 } catch (error) {
   console.log(error)
 }
+
+
 
 
 
