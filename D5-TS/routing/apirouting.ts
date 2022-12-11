@@ -5,6 +5,9 @@ const ApiRouting :Router  = express.Router();
 ApiRouting.post('/users', (req :express.Request , res:express.Response ) => {
     res.send(`data sent to user`);
 });
+ApiRouting.get('/', (req :express.Request , res:express.Response ) => {
+    res.send(`user router`);
+});
 
 
 export default ApiRouting;
